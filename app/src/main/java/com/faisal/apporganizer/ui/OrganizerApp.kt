@@ -535,12 +535,12 @@ private fun AppSheet(
 
             Spacer(Modifier.height(20.dp))
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
-                SheetAction(Icons.Rounded.PlayArrow, "فتح", onOpen)
+                SheetAction(Icons.Rounded.PlayArrow, "فتح", onClick = onOpen)
                 SheetAction(
                     if (isFavorite) Icons.Rounded.Star else Icons.Rounded.StarBorder,
                     if (isFavorite) "إزالة من المفضلة" else "إضافة للمفضلة",
-                    onToggleFavorite,
                     tint = if (isFavorite) FavoriteGold else MaterialTheme.colorScheme.onSurface,
+                    onClick = onToggleFavorite,
                 )
                 SheetAction(Icons.Rounded.Info, "معلومات") { AppActions.openInfo(context, app.packageName) }
                 SheetAction(Icons.Rounded.Delete, "إلغاء التثبيت") {
@@ -589,8 +589,8 @@ private fun AppSheet(
 private fun SheetAction(
     icon: ImageVector,
     label: String,
-    onClick: () -> Unit,
     tint: Color = MaterialTheme.colorScheme.onSurface,
+    onClick: () -> Unit,
 ) {
     Column(
         Modifier
