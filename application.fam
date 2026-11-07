@@ -1,0 +1,13 @@
+# For details & more options, see documentation/AppManifests.md in firmware repo
+
+App(
+    appid="app_organizer",
+    name="App Organizer",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="app_organizer_main",
+    stack_size=1 * 1024,
+    fap_category="Tools",
+    fap_version="0.1",
+    fap_icon="app_organizer.png",
+    fap_description="Organize and manage apps",
+)
