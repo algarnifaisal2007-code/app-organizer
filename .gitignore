@@ -1,0 +1,8 @@
+# ufbt build output and generated editor/tooling files
+dist/*
+.vscode
+.clang-format
+.clangd
+.editorconfig
+.env
+.ufbt
